@@ -54,7 +54,6 @@ nexusPublishing {
     }
 }
 
-// Kover instruments every JVM test, even when no coverage report is requested.
 val koverEnabled = providers.environmentVariable("CI").isPresent ||
     providers.gradleProperty("io.opentelemetry.android.coverage").map { it.toBoolean() }.getOrElse(false)
 
